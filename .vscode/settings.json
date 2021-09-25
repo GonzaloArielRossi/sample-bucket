@@ -1,0 +1,7 @@
+{
+    "explorer.compactFolders": false,
+    "emmet.includeLanguages": {
+        "\"javascript\":": "\"javascriptreact\""
+    }
+    
+}
