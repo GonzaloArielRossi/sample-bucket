@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/gonzaloarielrossi.github.io/sample-bucket/static/css/main.a617e044.chunk.css",
-    "main.js": "/gonzaloarielrossi.github.io/sample-bucket/static/js/main.dd4e2d30.chunk.js",
-    "main.js.map": "/gonzaloarielrossi.github.io/sample-bucket/static/js/main.dd4e2d30.chunk.js.map",
-    "runtime-main.js": "/gonzaloarielrossi.github.io/sample-bucket/static/js/runtime-main.85bbd9e0.js",
-    "runtime-main.js.map": "/gonzaloarielrossi.github.io/sample-bucket/static/js/runtime-main.85bbd9e0.js.map",
-    "static/js/2.20e7b1d7.chunk.js": "/gonzaloarielrossi.github.io/sample-bucket/static/js/2.20e7b1d7.chunk.js",
-    "static/js/2.20e7b1d7.chunk.js.map": "/gonzaloarielrossi.github.io/sample-bucket/static/js/2.20e7b1d7.chunk.js.map",
-    "static/js/3.f028ad76.chunk.js": "/gonzaloarielrossi.github.io/sample-bucket/static/js/3.f028ad76.chunk.js",
-    "static/js/3.f028ad76.chunk.js.map": "/gonzaloarielrossi.github.io/sample-bucket/static/js/3.f028ad76.chunk.js.map",
-    "index.html": "/gonzaloarielrossi.github.io/sample-bucket/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/gonzaloarielrossi.github.io/sample-bucket/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.20e7b1d7.chunk.js.LICENSE.txt": "/gonzaloarielrossi.github.io/sample-bucket/static/js/2.20e7b1d7.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/gonzaloarielrossi.github.io/sample-bucket/static/media/logo.6ce24c58.svg"
+    "main.css": "/sample-bucket/static/css/main.a617e044.chunk.css",
+    "main.js": "/sample-bucket/static/js/main.dd4e2d30.chunk.js",
+    "main.js.map": "/sample-bucket/static/js/main.dd4e2d30.chunk.js.map",
+    "runtime-main.js": "/sample-bucket/static/js/runtime-main.73962f43.js",
+    "runtime-main.js.map": "/sample-bucket/static/js/runtime-main.73962f43.js.map",
+    "static/js/2.20e7b1d7.chunk.js": "/sample-bucket/static/js/2.20e7b1d7.chunk.js",
+    "static/js/2.20e7b1d7.chunk.js.map": "/sample-bucket/static/js/2.20e7b1d7.chunk.js.map",
+    "static/js/3.f028ad76.chunk.js": "/sample-bucket/static/js/3.f028ad76.chunk.js",
+    "static/js/3.f028ad76.chunk.js.map": "/sample-bucket/static/js/3.f028ad76.chunk.js.map",
+    "index.html": "/sample-bucket/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/sample-bucket/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.20e7b1d7.chunk.js.LICENSE.txt": "/sample-bucket/static/js/2.20e7b1d7.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/sample-bucket/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.85bbd9e0.js",
+    "static/js/runtime-main.73962f43.js",
     "static/js/2.20e7b1d7.chunk.js",
     "static/css/main.a617e044.chunk.css",
     "static/js/main.dd4e2d30.chunk.js"
