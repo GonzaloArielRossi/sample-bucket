@@ -1,5 +1,6 @@
 import React from 'react'
-import bucketLogo from './logo.png'
+import bucketLogo from '../../Assets/Images/logo.png'
+
 export const ItemListContainer = ( props ) => {
     
     const {greeting} = props;
