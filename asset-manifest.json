@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/sample-bucket/static/css/main.10f766a1.chunk.css",
-    "main.js": "/sample-bucket/static/js/main.196fd5ad.chunk.js",
-    "main.js.map": "/sample-bucket/static/js/main.196fd5ad.chunk.js.map",
+    "main.css": "/sample-bucket/static/css/main.8baba030.chunk.css",
+    "main.js": "/sample-bucket/static/js/main.61373e67.chunk.js",
+    "main.js.map": "/sample-bucket/static/js/main.61373e67.chunk.js.map",
     "runtime-main.js": "/sample-bucket/static/js/runtime-main.bbc0f9a4.js",
     "runtime-main.js.map": "/sample-bucket/static/js/runtime-main.bbc0f9a4.js.map",
     "static/js/2.ba08c695.chunk.js": "/sample-bucket/static/js/2.ba08c695.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.6a56f8eb.chunk.js": "/sample-bucket/static/js/3.6a56f8eb.chunk.js",
     "static/js/3.6a56f8eb.chunk.js.map": "/sample-bucket/static/js/3.6a56f8eb.chunk.js.map",
     "index.html": "/sample-bucket/index.html",
-    "static/css/main.10f766a1.chunk.css.map": "/sample-bucket/static/css/main.10f766a1.chunk.css.map",
+    "static/css/main.8baba030.chunk.css.map": "/sample-bucket/static/css/main.8baba030.chunk.css.map",
     "static/js/2.ba08c695.chunk.js.LICENSE.txt": "/sample-bucket/static/js/2.ba08c695.chunk.js.LICENSE.txt",
     "static/media/nav-logo.b79ccc78.png": "/sample-bucket/static/media/nav-logo.b79ccc78.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bbc0f9a4.js",
     "static/js/2.ba08c695.chunk.js",
-    "static/css/main.10f766a1.chunk.css",
-    "static/js/main.196fd5ad.chunk.js"
+    "static/css/main.8baba030.chunk.css",
+    "static/js/main.61373e67.chunk.js"
   ]
 }
