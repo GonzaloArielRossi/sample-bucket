@@ -1,14 +1,35 @@
-import React from 'react'
-import bucketLogo from '../../Assets/Images/logo.png'
+import React, { useEffect, useState } from 'react'
+import { ItemList } from './ItemList'
+import { fetchItems } from '../../Helpers/fetchItems'
 
-export const ItemListContainer = ( props ) => {
+
+export const ItemListContainer = ( ) => {
     
-    const {greeting} = props;
-    console.log(greeting);
+    const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    useEffect(()=>{
+        setLoading(true)
+
+        fetchItems()
+            .then( res => {
+                setItems(res)
+            })
+            .catch( err => console.log(err))
+            .finally( () => {
+                setLoading(false)
+            })
+
+    }, [])
+
+
     return (
-        <article>
-            <p>{greeting}</p>
-            <img src={bucketLogo} alt="sample bucket main logo" className="main-logo"/>
-        </article>
+        <section>
+            {
+                loading 
+                ? <h2>Loading...</h2>
+                : <ItemList products={items}/>
+            }
+        </section>
     )
 }
