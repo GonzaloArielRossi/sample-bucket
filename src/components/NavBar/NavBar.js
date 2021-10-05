@@ -1,10 +1,10 @@
 import React from 'react';
 import {CartWidget} from './CartWidget';
 import navLogo from '../../Assets/Images/nav-logo.png';
+import './NavBar.css'  
 
-export const NavBar = () => {
-    
-    
+
+export const NavBar = () => {   
     return (
         <header>
             <nav className="nav-menu">

@@ -7,9 +7,7 @@
     row-gap: 4.8rem;
     column-gap: 0;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8rem;
+    margin: 6.4rem auto;
 }
 
 .item-card{
@@ -20,7 +18,7 @@
     align-items: left;
     font-size: 1.2rem;
     border-radius: 1rem;
-    box-shadow: .2rem .5rem .8rem  rgba(37, 10, 10, .7);
+    box-shadow: .2rem .4rem 1rem  rgba(37, 10, 10, .4);
 }
 
 .item-card-img{
@@ -30,16 +28,17 @@
 
 .item-card-btn{
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    align-self: center;
+    display: inline-block;
     color: #eee;
     background-color: #b015e8;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    font-weight: 900;
+    padding: 1rem;
+    border-radius: .8rem;
+    font-weight: 800;
     box-shadow: .2rem .2rem .3rem  rgba(37, 10, 10, .7);
     margin-bottom: 2.4rem;
+    margin-top: .8rem;
 }
 
 .item-card-category{
@@ -56,18 +55,25 @@
     margin-left: 2rem;
 }
 .item-card-description{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
 }
+
 .item-card-price{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
 }
 
 .item-card-icon{
-    margin-top: auto;
+    font-size: 2rem;
 }
 .item-card-btn{
 

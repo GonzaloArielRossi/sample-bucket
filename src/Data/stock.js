@@ -25,7 +25,7 @@ export const stock = [
     },
     {
         id: 4,
-        name: "Product 5",
+        name: "Product 4",
         description: "In minim aliqua sint consequat.",
         category: "trap",
         price: 10,
@@ -61,7 +61,7 @@ export const stock = [
         description: "In minim aliqua sint consequat.",
         category: "drill",
         price: 24,
-        img: "https://picsum.photos/seed/45/300/200/?blur=2"
+        img: "https://picsum.photos/seed/49/300/200/?blur=2"
     },
     {
         id: 9,
@@ -69,6 +69,6 @@ export const stock = [
         description: "In minim aliqua sint consequat.",
         category: "drill",
         price: 11,
-        img: "https://picsum.photos/seed/11/300/200/?blur=2"
+        img: "https://picsum.photos/seed/77/300/200/?blur=2"
     }
 ]

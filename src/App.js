@@ -4,11 +4,10 @@ import './App.css'
 
 function App() {
 
-  const greeting = "Welcome to Sample Bucket";
   return (
     <div> 
       <NavBar />
-      <ItemListContainer greeting={greeting} />
+      <ItemListContainer />
     </div>
   );
 }
