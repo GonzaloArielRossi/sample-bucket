@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiTag } from 'react-icons/hi';
 import { HiInformationCircle } from 'react-icons/hi';
-import './item.css';
+import './ItemListContainer.css';
 
 export const Item = ( {id, name, description, category, price, img} ) => {
 

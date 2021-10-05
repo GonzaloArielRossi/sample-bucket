@@ -24,11 +24,11 @@ export const ItemListContainer = ( ) => {
 
 
     return (
-        <section>
+        <section className="item-card-section">
             {
                 loading 
                 ? <h2>Loading...</h2>
-                : <ItemList products={items}/>
+                : <ItemList products={items} />
             }
         </section>
     )

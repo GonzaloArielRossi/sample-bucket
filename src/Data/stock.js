@@ -45,7 +45,7 @@ export const stock = [
         description: "In minim aliqua sint consequat.",
         category: "trap",
         price: 36,
-        img: "https://picsum.photos/seed/11/300/200/?blur=2"
+        img: "https://picsum.photos/seed/33/300/200/?blur=2"
     },
     {
         id: 7,
@@ -69,6 +69,6 @@ export const stock = [
         description: "In minim aliqua sint consequat.",
         category: "drill",
         price: 11,
-        img: "https://picsum.photos/seed/77/300/200/?blur=2"
+        img: "https://picsum.photos/seed/76/300/200/?blur=2"
     }
 ]
