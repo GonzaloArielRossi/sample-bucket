@@ -1,11 +1,11 @@
-import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
-import { NavBar } from "./Components/NavBar/NavBar";
-import './App.css'
+import React from 'react';
+import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer';
+import { NavBar } from './Components/NavBar/NavBar';
+import './App.css';
 
 function App() {
-
   return (
-    <div> 
+    <div>
       <NavBar />
       <ItemListContainer />
     </div>

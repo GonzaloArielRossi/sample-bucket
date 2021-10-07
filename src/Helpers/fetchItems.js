@@ -1,11 +1,9 @@
-import { stock } from "../Data/stock"
-
+import { stock } from '../Data/stock';
 
 export const fetchItems = () => {
-    return new Promise( (resolve, reject) => {
-        setTimeout( () => {
-            resolve(stock)
-        }, 2000)
-
-    })
-}
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(stock);
+    }, 2000);
+  });
+};
