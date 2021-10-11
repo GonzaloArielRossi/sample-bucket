@@ -38,7 +38,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 ## About Dependencies
 
 - React-use-sound:
-  <br/>It's in charge of playing the audio samples.
+  <br/>It's in charge of playing audio samples.
   <br/>+info: https://github.com/joshwcomeau/use-sound
 
 - React-router-dom
@@ -58,6 +58,14 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 ## Navigation
 
 ![](https://media.giphy.com/media/NPhbVXTSqh2fP4hNVh/giphy.gif)
+
+<hr/>
+
+## Live Version
+
+Check out a live version of the site, hosted on github pages.
+
+https://gonzaloarielrossi.github.io/
 
 <hr/>
 
