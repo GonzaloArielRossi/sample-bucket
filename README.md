@@ -65,7 +65,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 Check out a live version of the site, hosted on github pages.
 
-https://gonzaloarielrossi.github.io/
+https://gonzaloarielrossi.github.io/sample-bucket/
 
 <hr/>
 
