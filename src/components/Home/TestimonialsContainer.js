@@ -6,11 +6,11 @@ import KeshaLee from '../../Assets/Images/testimonials/kesha-lee.png';
 
 export const TestimonialsContainer = () => {
   return (
-    <section>
-      <h1 className="testimonials-title">
-        What creators are saying about Sample Bucket
-      </h1>
-      <div className="testimonials-main">
+    <section className="testimonials-main">
+      <div className="testimonials-grid">
+        <h1 className="testimonials-title">
+          What creators are saying about Sample Bucket
+        </h1>
         <div className="testimonials-flex-container">
           <Testimonials
             img={Andrewhuang}

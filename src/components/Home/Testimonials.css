@@ -1,8 +1,13 @@
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 20rem;
+}
+
 .testimonials-main {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
-  margin-bottom: 12rem;
 }
 .testimonials-flex-container {
   display: flex;
@@ -11,10 +16,9 @@
 }
 .testimonials-title {
   text-align: left;
-  margin-left: 32rem;
-  margin-top: 8rem;
   margin-bottom: 8rem;
-  align-self: flex-start;
+  grid-column: 1/-1;
+  justify-self: flex-start;
 }
 
 .testimonials-flex {

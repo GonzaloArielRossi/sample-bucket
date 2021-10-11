@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import '../../Hooks/pad-keypress';
 import { useKeyPress } from '../../Hooks/pad-keypress';
 import useSound from 'use-sound';
