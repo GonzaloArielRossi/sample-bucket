@@ -1,0 +1,38 @@
+.details-main {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 16rem 3.2rem 16rem 8rem;
+  color: #888;
+}
+.details-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+}
+.details-icon-circle {
+  background-color: #0086ff;
+  height: 12rem;
+  width: 12rem;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+.details-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  transform: scale(0.8);
+}
+
+.details-title {
+  color: #111;
+  font-size: 2.4rem;
+}
+
+.details-text {
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+}

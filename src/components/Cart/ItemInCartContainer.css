@@ -1,0 +1,36 @@
+.item-cart-main {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+  border-top: solid 2px #ccc;
+  margin-bottom: 32rem;
+}
+
+.item-cart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.--cart {
+  border-radius: 1.2rem;
+  width: 150px;
+}
+
+.btn-item-cart-delete {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: center;
+  align-self: center;
+  display: inline-block;
+  color: #eee;
+  background-color: #0086ff;
+  text-decoration: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(37, 10, 10, 0.7);
+  margin-bottom: 2.4rem;
+  margin-top: 0.8rem;
+}

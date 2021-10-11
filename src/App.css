@@ -26,6 +26,14 @@ Large: 1.8
 
 - Primary:
 #b015e8
+- Secondary:
+#FF00AD
+#FFE8FF
+#FF3976
+#FF894E
+#0086FF
+#009DD6
+#00A091
 - Tints:
 
 
@@ -49,29 +57,21 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-
 /* HTML TAGS */
-h1{
-    font-size: 3.6rem;
-    text-align: center;
+h1 {
+  font-size: 3.6rem;
+  text-align: center;
 }
 
-nav p {
-    font-size: 2rem;
+article p {
+  font-size: 3.6rem;
+  margin-top: 8rem;
 }
 
-article p{
-    font-size: 3.6rem;
-    margin-top: 8rem;
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
-
-article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-}
-
-
-

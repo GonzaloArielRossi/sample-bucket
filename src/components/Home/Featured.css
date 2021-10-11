@@ -1,0 +1,23 @@
+.features-main {
+  background-color: #ff894e;
+  margin-bottom: 16rem;
+}
+.features-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.features-title {
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+.features-logo-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+.features-img {
+  fill: #555;
+  width: 16rem;
+}

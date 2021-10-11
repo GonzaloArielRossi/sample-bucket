@@ -3,7 +3,7 @@ import { HiOutlineShoppingCart } from 'react-icons/hi';
 
 export const CartWidget = () => {
   // Placeholder de variable para el futuro
-  const itemsInCart = 0;
+  const itemsInCart = 1;
 
   return (
     <div className="shopping-cart-combo">

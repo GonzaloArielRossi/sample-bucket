@@ -16,5 +16,6 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'react/prop-types': 0,
+    'comma-dangle': ['warn', 'never'],
   },
 };
