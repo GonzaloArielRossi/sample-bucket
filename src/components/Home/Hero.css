@@ -6,13 +6,17 @@
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
+  background-color: #ffe8ff;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9.6 rem;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 9.6rem;
   align-items: center;
+  justify-content: space-between;
 }
 
 .hero-info-main-text {
@@ -31,8 +35,6 @@
 }
 
 .hero-info-btn {
-  align-self: center;
-  display: inline-block;
   font-size: 2rem;
   font-weight: 800;
   color: #eee;
@@ -50,7 +52,7 @@
 
 .--cta:hover {
   background-color: #7804a1;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .--more-info {
@@ -61,5 +63,4 @@
 
 .hero-image {
   width: 100%;
-  transform: scale(0.8);
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../Assets/Images/logo.png';
 import './Hero.css';
 
-export const Hero = ({}) => {
+export const Hero = () => {
   return (
     <section className="hero-main">
       <div className="hero-container">

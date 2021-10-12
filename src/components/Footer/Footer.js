@@ -25,16 +25,20 @@ export const Footer = () => {
             <TiSocialYoutube className="footer-socials-logo" />
             <AiFillInstagram className="footer-socials-logo" />
           </div>
-          <p className="footer-text">
-            Copyright © 2021 by Sample Bucket,
+          <p className="footer-text" translate="no">
+            Copyright © 2021 by <span translate="no">Sample Bucket</span>,
             <br /> Inc. All rights reserved.
           </p>
         </div>
         <div className="footer-column">
           <p className="footer-title">Contact Us</p>
-          <p className="footer-text">1833 Olga Cosettinni, Buenos Aires</p>
+          <p className="footer-text" translate="no">
+            1833 Olga Cosettinni, Buenos Aires
+          </p>
           <p className="footer-text">(851) 213-5090</p>
-          <p className="footer-text">support@samplebucket.com</p>
+          <p className="footer-text" translate="no">
+            support@samplebucket.com
+          </p>
         </div>
         <div className="footer-column">
           <p className="footer-title">Account</p>
@@ -51,7 +55,7 @@ export const Footer = () => {
         <div className="footer-column">
           <p className="footer-title">Company</p>
           <Link to="/-up" className="footer-link">
-            About Sample Bucket
+            About <span translate="no">Sample Bucket</span>
           </Link>
           <Link to="/" className="footer-link">
             Testimonials
