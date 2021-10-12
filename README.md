@@ -57,7 +57,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 ## Navigation
 
-<img src="https://i.ibb.co/CbwM4Zj/navigation.gif" width= "80%" />
+<img src="https://media.giphy.com/media/NPhbVXTSqh2fP4hNVh/giphy.gif" width= "100%" />
 
 <hr/>
 
