@@ -20,7 +20,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 - Sample Pads
 
-![](https://i.imgur.com/0A66LXK.png)
+![](https://i.imgur.com/vmWxISg.png)
 
 <hr/>
 
@@ -57,7 +57,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 ## Navigation
 
-<img src="https://media.giphy.com/media/NPhbVXTSqh2fP4hNVh/giphy.gif" width= "100%" />
+<img src="https://media.giphy.com/media/4Ohh1RPhOI2d53NT0V/giphy.gif" width= "100%" />
 
 <hr/>
 

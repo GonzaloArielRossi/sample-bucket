@@ -24,7 +24,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <div className="item-details-main">
-      <div className="item-details-grid-container">
+      <div className="item-details-flex-container">
         <div>{loading ? <h2>Loading...</h2> : <ItemDetail {...item} />}</div>
         <SamplePads />
       </div>

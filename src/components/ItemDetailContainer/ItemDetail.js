@@ -1,13 +1,20 @@
 import React from 'react';
 import { HiTag, HiInformationCircle, HiArrowSmLeft } from 'react-icons/hi';
-import { Link, useHistory } from 'react-router-dom';
-import { SamplePad } from './SamplePads';
+import { useHistory } from 'react-router-dom';
 
-export const ItemDetail = ({ id, name, description, category, price, img }) => {
+export const ItemDetail = ({
+  id,
+  name,
+  description,
+  category,
+  price,
+  img,
+  details
+}) => {
   const { goBack, push } = useHistory();
   return (
     <>
-      <div className="item-detail-conatiner">
+      <div className="item-detail-card">
         <HiArrowSmLeft
           className="go-back-icon"
           onClick={() => goBack()}
@@ -27,6 +34,7 @@ export const ItemDetail = ({ id, name, description, category, price, img }) => {
           <p className="item-card-price">
             <HiTag className="item-card-icon" /> ${price}
           </p>
+          <p className="item-card-description --details">{details}</p>
           <button className="item-card-btn">ADD TO CART</button>
         </div>
       </div>
