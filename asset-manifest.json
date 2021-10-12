@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/sample-bucket/static/css/main.04173d18.chunk.css",
-    "main.js": "/sample-bucket/static/js/main.57930320.chunk.js",
-    "main.js.map": "/sample-bucket/static/js/main.57930320.chunk.js.map",
+    "main.css": "/sample-bucket/static/css/main.4ffaeae9.chunk.css",
+    "main.js": "/sample-bucket/static/js/main.e2ba94e0.chunk.js",
+    "main.js.map": "/sample-bucket/static/js/main.e2ba94e0.chunk.js.map",
     "runtime-main.js": "/sample-bucket/static/js/runtime-main.66cdbdb6.js",
     "runtime-main.js.map": "/sample-bucket/static/js/runtime-main.66cdbdb6.js.map",
-    "static/js/2.fba60cb3.chunk.js": "/sample-bucket/static/js/2.fba60cb3.chunk.js",
-    "static/js/2.fba60cb3.chunk.js.map": "/sample-bucket/static/js/2.fba60cb3.chunk.js.map",
+    "static/js/2.344097c2.chunk.js": "/sample-bucket/static/js/2.344097c2.chunk.js",
+    "static/js/2.344097c2.chunk.js.map": "/sample-bucket/static/js/2.344097c2.chunk.js.map",
     "static/js/3.176cbebd.chunk.js": "/sample-bucket/static/js/3.176cbebd.chunk.js",
     "static/js/3.176cbebd.chunk.js.map": "/sample-bucket/static/js/3.176cbebd.chunk.js.map",
     "static/js/4.ec8b6095.chunk.js": "/sample-bucket/static/js/4.ec8b6095.chunk.js",
     "static/js/4.ec8b6095.chunk.js.map": "/sample-bucket/static/js/4.ec8b6095.chunk.js.map",
     "index.html": "/sample-bucket/index.html",
-    "static/css/main.04173d18.chunk.css.map": "/sample-bucket/static/css/main.04173d18.chunk.css.map",
-    "static/js/2.fba60cb3.chunk.js.LICENSE.txt": "/sample-bucket/static/js/2.fba60cb3.chunk.js.LICENSE.txt",
+    "static/css/main.4ffaeae9.chunk.css.map": "/sample-bucket/static/css/main.4ffaeae9.chunk.css.map",
+    "static/js/2.344097c2.chunk.js.LICENSE.txt": "/sample-bucket/static/js/2.344097c2.chunk.js.LICENSE.txt",
     "static/js/3.176cbebd.chunk.js.LICENSE.txt": "/sample-bucket/static/js/3.176cbebd.chunk.js.LICENSE.txt",
     "static/media/Clap.26f018a0.wav": "/sample-bucket/static/media/Clap.26f018a0.wav",
     "static/media/HhClosed.a4683fe7.wav": "/sample-bucket/static/media/HhClosed.a4683fe7.wav",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.66cdbdb6.js",
-    "static/js/2.fba60cb3.chunk.js",
-    "static/css/main.04173d18.chunk.css",
-    "static/js/main.57930320.chunk.js"
+    "static/js/2.344097c2.chunk.js",
+    "static/css/main.4ffaeae9.chunk.css",
+    "static/js/main.e2ba94e0.chunk.js"
   ]
 }
