@@ -12,6 +12,7 @@ export const ItemDetail = ({
   details
 }) => {
   const { goBack, push } = useHistory();
+
   return (
     <>
       <div className="item-detail-card">
