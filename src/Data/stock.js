@@ -5,6 +5,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'RAP',
     price: 16,
+    stock: 10,
     img: 'https://picsum.photos/seed/1/300/200/?blur=2',
     details: `Dusty Hip-Hop 3 is the result of countless studio performances, sampling and resampling sessions,
           capturing various vintage kit such as keys, pianos, organs, vocals, and drums. At the heart of the collection
@@ -17,6 +18,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'RAP',
     price: 11,
+    stock: 0,
     img: 'https://picsum.photos/seed/5/300/200/?blur=2',
     details: `Processed with real analogue saturation for the knock, the kit also contains re-sampled live
               and machine-based hits including thudding kicks, punchy snares, crunchy claps, and dusty hi-hats.
@@ -28,6 +30,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'RAP',
     price: 50,
+    stock: 870,
     img: 'https://picsum.photos/seed/40/300/200/?blur=2',
     details: `We recorded and resampled live and machine-based drum hits, including thick kicks,
               shuffling snares, organic rim-shots, and crumbling percussion. Drum loops include heavily swung beats,
@@ -39,6 +42,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'TRAP',
     price: 10,
+    stock: 6715,
     img: 'https://picsum.photos/seed/45/300/200/?blur=2',
     details: `Inspired by the artists who incorporate various unique styles into one body of work,
               Ray says this pack feels like traveling through different cities. Discover thumping 808s,
@@ -51,6 +55,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'TRAP',
     price: 38,
+    stock: 5527,
     img: 'https://picsum.photos/seed/17/300/200/?blur=2',
     details: `Step into the warm, saucy world of alternative RnB and trap melodies. 
               This pack is designed to give you that instant inspiration for your next production—instruments,
@@ -62,6 +67,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'TRAP',
     price: 36,
+    stock: 9551,
     img: 'https://picsum.photos/seed/33/300/200/?blur=2',
     details: `This pack includes a full drum kit of one-shots and loops featuring detailed
               sound design and custom hits. Heavy saturation, unique layering, and sound sculpting
@@ -74,6 +80,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'DRILL',
     price: 47,
+    stock: 2775,
     img: 'https://picsum.photos/seed/46/300/200/?blur=2',
     details: `Drill & Trap enters the murky world of haunted melodies, moody re-sampled pianos
               and gliding 808s that defines the drill sound. Gut punch kicks and razor sharp metallic
@@ -85,6 +92,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'DRILL',
     price: 24,
+    stock: 3348,
     img: 'https://picsum.photos/seed/49/300/200/?blur=2',
     details: `The pack comes filled with bags of character. Vintage style melodic stacks,
               reversed pianos and lofi chopped guitars fade into vocal chops, hard 808 hits and dark themes.
@@ -96,6 +104,7 @@ export const stock = [
     description: 'In minim aliqua sint consequat.',
     category: 'DRILL',
     price: 11,
+    stock: 192,
     img: 'https://picsum.photos/seed/76/300/200/?blur=2',
     details: `Expect dark, twisted melodic loops, resampled lofi sauce, and a brand new 100% original
               custom-designed drum kit with ready clipped kicks, and sharp, crispy snares for that

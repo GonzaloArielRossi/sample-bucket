@@ -127,20 +127,3 @@ p {
 .article-category-active {
   text-decoration: underline;
 }
-
-/* ////////////////////BACKUP//////////////////////// */
-/* 
-.item-card-btn {
-  width: 60%;
-  align-self: center;
-  display: inline-block;
-  color: #eee;
-  background-color: #b015e8;
-  border: none;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  font-weight: 800;
-  box-shadow: 0.2rem 0.2rem 0.3rem rgba(37, 10, 10, 0.7);
-  margin-bottom: 2.4rem;
-  margin-top: 0.8rem;
-} */

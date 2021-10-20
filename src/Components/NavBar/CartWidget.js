@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import { CartContext } from '../../Context/CartContext';
 
 export const CartWidget = () => {
-  // Placeholder de variable para el futuro
-  const itemsInCart = 1;
+  const { getQuantity } = useContext(CartContext);
 
   return (
     <div className="shopping-cart-combo">
       <HiOutlineShoppingCart alt="shopping cart" className="shopping-cart" />
-      <p className="items-in-cart">{itemsInCart}</p>
+      <p className="items-in-cart">{getQuantity()}</p>
     </div>
   );
 };

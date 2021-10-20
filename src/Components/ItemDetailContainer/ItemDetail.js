@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { HiTag, HiInformationCircle, HiArrowSmLeft } from 'react-icons/hi';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext';
+import { ItemCounter } from '../ItemCounter/ItemCounter';
+import './ItemDetail.css';
 
 export const ItemDetail = ({
   id,
@@ -8,14 +11,50 @@ export const ItemDetail = ({
   description,
   category,
   price,
+  stock,
   img,
   details
 }) => {
-  const { goBack, push } = useHistory();
+  const { goBack } = useHistory();
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart, isInCart, cart, setCart } = useContext(CartContext);
+  const [outOfStock, setOutOfStock] = useState(stock == 0);
+  const modifyCartItem = (item) => {
+    if (item.id == id) {
+      item.quantity += quantity;
+    }
+  };
+
+  const handleAddItemToCart = () => {
+    if (!isInCart(id)) {
+      const newItem = {
+        id,
+        name,
+        description,
+        category,
+        price,
+        stock,
+        img,
+        details,
+        quantity
+      };
+      addToCart(newItem);
+    } else {
+      const newCart = [...cart];
+      newCart.forEach((item) => modifyCartItem(item));
+      setCart(newCart);
+    }
+  };
+
+  const cartBtnClasses = [
+    'item-details-btn',
+    '--main',
+    outOfStock && '--disabled'
+  ];
 
   return (
     <>
-      <div className="item-detail-card">
+      <div>
         <HiArrowSmLeft
           className="go-back-icon"
           onClick={() => goBack()}
@@ -27,7 +66,7 @@ export const ItemDetail = ({
             alt={`${name} ${description}`}
             className="item-card-img"
           ></img>
-          <p className={`item-card-category --${category}`}>{category}</p>
+          <p className={`item-card-category --${category}`}>{category} </p>
           <p className="item-card-product-name">{name}</p>
           <p className="item-card-description">
             <HiInformationCircle className="item-card-icon" /> {description}
@@ -36,7 +75,29 @@ export const ItemDetail = ({
             <HiTag className="item-card-icon" /> ${price}
           </p>
           <p className="item-card-description --details">{details}</p>
-          <button className="item-card-btn">ADD TO CART</button>
+          <p className="stock-details">
+            {stock ? `Stock: ${stock}` : 'Out of stock'}
+          </p>
+          {isInCart(id) ? (
+            <Link to="/cart" className="item-details-btn --buy">
+              GO TO CART
+            </Link>
+          ) : (
+            <div className="cart-controls">
+              <ItemCounter
+                quantity={quantity}
+                setQuantity={setQuantity}
+                stock={stock}
+              />
+              <button
+                className={cartBtnClasses.join(' ')}
+                onClick={handleAddItemToCart}
+                disabled={outOfStock}
+              >
+                ADD TO CART
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
