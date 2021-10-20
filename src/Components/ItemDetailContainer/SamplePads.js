@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import '../../Hooks/pad-keypress';
-import { useKeyPress } from '../../Hooks/pad-keypress';
+import { useKeyPress } from '../../Hooks/padKeyPress';
 import useSound from 'use-sound';
 import {
   Kick,
