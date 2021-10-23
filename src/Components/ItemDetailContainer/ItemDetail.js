@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { HiTag, HiInformationCircle, HiArrowSmLeft } from 'react-icons/hi';
-import { useHistory } from 'react-router-dom';
 import './ItemDetail.css';
 
 export const ItemDetail = ({
