@@ -86,7 +86,7 @@ export const ItemDetail = ({
                 stock={stock}
               />
               <button
-                className={`${cartBtnClass} --main {outOfStock && '--disabled'}`}
+                className={`${cartBtnClass} --main {outOfStock && ' --disabled'}`}
                 onClick={handleAddItemToCart}
                 disabled={outOfStock}
               >
