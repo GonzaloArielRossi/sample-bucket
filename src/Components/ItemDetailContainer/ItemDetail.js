@@ -45,12 +45,8 @@ export const ItemDetail = ({
       setCart(newCart);
     }
   };
-
-  const cartBtnClasses = [
-    'item-details-btn',
-    '--main',
-    outOfStock && '--disabled'
-  ];
+  
+  const cartBtnClass = 'item-details-btn';
 
   return (
     <>
@@ -90,7 +86,7 @@ export const ItemDetail = ({
                 stock={stock}
               />
               <button
-                className={cartBtnClasses.join(' ')}
+                className={`${cartBtnClass} --main {outOfStock && '--disabled'}`}
                 onClick={handleAddItemToCart}
                 disabled={outOfStock}
               >
