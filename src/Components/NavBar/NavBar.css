@@ -54,3 +54,7 @@
 .nav-active-link {
   text-decoration: underline;
 }
+
+.--margin-rigth {
+  margin-right: 4rem;
+}

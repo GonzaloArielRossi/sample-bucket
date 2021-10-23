@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 3.2rem;
   margin-bottom: 2.4rem;
 }
 
@@ -37,7 +38,7 @@
   background-color: #0459a3;
 }
 
-.cartTotal {
+.cart-total {
   display: flex;
   align-content: center;
   justify-content: flex-end;
@@ -67,4 +68,13 @@
 
 .--center {
   margin: 0 auto;
+}
+
+Link:active,
+Link:visited {
+  color: black;
+}
+
+.--underline {
+  text-decoration: underline;
 }

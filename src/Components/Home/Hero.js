@@ -20,7 +20,7 @@ export const Hero = () => {
             <Link to={`/products`} className="hero-info-btn --cta">
               Try Sample Packs
             </Link>
-            <button className="hero-info-btn --more-info">Learn More 👇</button>
+            <span className="hero-info-btn --more-info">Learn More 👇</span>
           </div>
           <img src={logo} className="hero-image"></img>
         </div>

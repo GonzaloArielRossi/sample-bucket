@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import { fetchItems } from '../../Helpers/fetchItems';
+import { useHistory, useParams } from 'react-router';
 import { ItemDetail } from './ItemDetail';
 import { SamplePads } from './SamplePads';
+import { getFirestore } from '../../Firebase/config';
+import { CartControls } from './CartControls';
 import './ItemDetailContainer.css';
+import { HiArrowSmLeft } from 'react-icons/hi';
+import { Spinner } from '../Spinner/Spinner';
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -13,20 +16,36 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetchItems()
-      .then((res) => {
-        setItem(res.find((prod) => prod.id === Number(itemId)));
+    const db = getFirestore();
+    const products = db.collection('products');
+    const product = products.doc(itemId);
+
+    product
+      .get()
+      .then((doc) => {
+        setItem({
+          id: doc.id,
+          ...doc.data()
+        });
       })
+      .catch((err) => console.error(err))
       .finally(() => {
         setLoading(false);
       });
-  }, [itemId]);
+  }, [itemId, setLoading]);
+
+  const { goBack } = useHistory();
 
   return (
     <div className="item-details-main">
       <div className="item-details-flex-container">
-        <div>{loading ? <h2>Loading...</h2> : <ItemDetail {...item} />}</div>
+        <HiArrowSmLeft
+          className="go-back-icon"
+          onClick={() => goBack()}
+        ></HiArrowSmLeft>
+        <div>{loading ? <Spinner /> : <ItemDetail {...item} />}</div>
         <SamplePads />
+        <CartControls {...item} />
       </div>
     </div>
   );

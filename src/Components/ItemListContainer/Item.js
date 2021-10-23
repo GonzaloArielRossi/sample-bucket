@@ -4,9 +4,17 @@ import { Link } from 'react-router-dom';
 
 import './ItemListContainer.css';
 
-export const Item = ({ id, name, description, category, price, img }) => {
+export const Item = ({
+  id,
+  name,
+  description,
+  category,
+  price,
+  stock,
+  img
+}) => {
   return (
-    <div className="item-card">
+    <div className="item-card --scale">
       <img
         src={img}
         alt={`${name} ${description}`}
@@ -21,6 +29,9 @@ export const Item = ({ id, name, description, category, price, img }) => {
       </p>
       <p className="item-card-price">
         <HiTag className="item-card-icon" /> ${price}
+      </p>
+      <p className="stock-details --left-margin">
+        {stock ? `Stock: ${stock}` : 'Out of stock'}
       </p>
       <Link to={`/productDetails/${id}`} className="item-card-btn">
         TRY PACK

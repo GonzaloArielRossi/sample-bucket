@@ -19,21 +19,28 @@ export const Cart = () => {
       {cart.map((item, key) => (
         <div key={key}>
           <div className="item-cart-flex">
-            <img
-              src={item.img}
-              alt={`${item.name} ${item.description}`}
-              className="item-card-img --cart"
-            ></img>
-            <p className="item-card-product-name">{item.name}</p>
+            <Link to={`/productDetails/${item.id}`} className="nav-link">
+              <img
+                src={item.img}
+                alt={`${item.name} ${item.description}`}
+                className="item-card-img --cart"
+              ></img>
+            </Link>
+            <Link
+              to={`/productDetails/${item.id}`}
+              className="nav-link --underline"
+            >
+              <p className="item-card-product-name">{item.name}</p>
+            </Link>
             <p className="item-card-description">
               <HiInformationCircle className="item-card-icon" />{' '}
               {item.description}
             </p>
-            <p className="item-card-price">
+            <p className="item-card-price ">
               <HiTag className="item-card-icon" /> ${item.price}
             </p>
-            <p className="item-card-price">{item.quantity}</p>
-            <p className="item-card-price">{`$${
+            <p className="item-card-price">{`Qty: ${item.quantity}`}</p>
+            <p className="item-card-price">{`Subtotal: $${
               item.quantity * item.price
             }`}</p>
             <button
@@ -45,7 +52,7 @@ export const Cart = () => {
           </div>
         </div>
       ))}
-      <div className="cartTotal">
+      <div className="cart-total">
         <p className="cart-total-text">{`Total: $${getTotal()}`}</p>
         <button className="btn-item-cart-delete" onClick={emptyCart}>
           Empty Cart

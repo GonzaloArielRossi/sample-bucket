@@ -3,7 +3,7 @@ import '../ItemDetailContainer/ItemDetailContainer.css';
 
 export const ItemCounter = ({ quantity, setQuantity, stock }) => {
   return (
-    <>
+    <div className="item-counter-flex">
       <button
         className="item-details-btn --quantity"
         onClick={() => quantity > 1 && setQuantity(quantity - 1)}
@@ -17,6 +17,6 @@ export const ItemCounter = ({ quantity, setQuantity, stock }) => {
       >
         +
       </button>
-    </>
+    </div>
   );
 };

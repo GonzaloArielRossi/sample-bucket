@@ -1,12 +1,21 @@
-import React from 'react';
-import { CartWidget } from './CartWidget';
+import React, { useContext, useEffect, useState } from 'react';
 import navLogo from '../../Assets/Images/nav-logo.png';
+import { CartWidget } from './CartWidget';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext';
+
 import './NavBar.css';
 
 export const NavBar = () => {
   // Get current location to change de nav background color
   const location = useLocation().pathname;
+  const { cart } = useContext(CartContext);
+  const [showCart, setShowCart] = useState(false);
+  const navClasses = ['nav-link', !showCart && '--margin-rigth'];
+
+  useEffect(() => {
+    setShowCart(cart.length != 0);
+  }, [cart]);
 
   return (
     <header>
@@ -38,13 +47,15 @@ export const NavBar = () => {
         <NavLink
           to="/sign-up"
           activeClassName="nav-active-link"
-          className="nav-link"
+          className={navClasses.join(' ')}
         >
           Sign-Up
         </NavLink>
-        <NavLink to="/cart" className="nav-link">
-          <CartWidget />
-        </NavLink>
+        {showCart && (
+          <NavLink to="/cart" className="nav-link">
+            <CartWidget />
+          </NavLink>
+        )}
       </nav>
     </header>
   );

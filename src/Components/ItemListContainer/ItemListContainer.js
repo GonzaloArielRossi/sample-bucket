@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ItemList } from './ItemList';
-import { fetchItems } from '../../Helpers/fetchItems';
 import { useParams, NavLink } from 'react-router-dom';
+import { getFirestore } from '../../Firebase/config';
+import { Spinner } from '../Spinner/Spinner';
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -11,20 +12,25 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     setLoading(true);
+    const db = getFirestore();
+    const products = categoryId
+      ? db.collection('products').where('category', '==', categoryId)
+      : db.collection('products');
 
-    fetchItems()
+    products
+      .get()
       .then((res) => {
-        if (categoryId) {
-          setItems(res.filter((prod) => prod.category === categoryId));
-        } else {
-          setItems(res);
-        }
+        const newItems = res.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setItems(newItems);
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.error(err))
       .finally(() => {
         setLoading(false);
       });
-  }, [categoryId]);
+  }, [categoryId, setLoading]);
 
   return (
     <>
@@ -61,7 +67,7 @@ export const ItemListContainer = () => {
         </NavLink>
       </nav>
       <section className="item-card-section">
-        {loading ? <h2>Loading...</h2> : <ItemList products={items} />}
+        {loading ? <Spinner /> : <ItemList products={items} />}
       </section>
     </>
   );
