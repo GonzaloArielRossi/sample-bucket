@@ -43,6 +43,7 @@ export const CartControls = ({
       newCart.forEach((item) => modifyCartItem(item));
       setCart(newCart);
     }
+    setQuantity(1);
   };
 
   const modifyCartItem = (item) => {
@@ -57,6 +58,7 @@ export const CartControls = ({
         quantity={quantity}
         setQuantity={setQuantity}
         stock={stock}
+        outOfStock={outOfStock}
       />
 
       <button
