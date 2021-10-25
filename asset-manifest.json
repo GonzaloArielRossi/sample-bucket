@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/sample-bucket/static/css/main.43845ab5.chunk.css",
-    "main.js": "/sample-bucket/static/js/main.8fd0079d.chunk.js",
-    "main.js.map": "/sample-bucket/static/js/main.8fd0079d.chunk.js.map",
+    "main.css": "/sample-bucket/static/css/main.792b0243.chunk.css",
+    "main.js": "/sample-bucket/static/js/main.e2f3efb7.chunk.js",
+    "main.js.map": "/sample-bucket/static/js/main.e2f3efb7.chunk.js.map",
     "runtime-main.js": "/sample-bucket/static/js/runtime-main.ca847c1d.js",
     "runtime-main.js.map": "/sample-bucket/static/js/runtime-main.ca847c1d.js.map",
     "static/js/2.276783df.chunk.js": "/sample-bucket/static/js/2.276783df.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/4.c1b51e0c.chunk.js": "/sample-bucket/static/js/4.c1b51e0c.chunk.js",
     "static/js/4.c1b51e0c.chunk.js.map": "/sample-bucket/static/js/4.c1b51e0c.chunk.js.map",
     "index.html": "/sample-bucket/index.html",
-    "static/css/main.43845ab5.chunk.css.map": "/sample-bucket/static/css/main.43845ab5.chunk.css.map",
+    "static/css/main.792b0243.chunk.css.map": "/sample-bucket/static/css/main.792b0243.chunk.css.map",
     "static/js/2.276783df.chunk.js.LICENSE.txt": "/sample-bucket/static/js/2.276783df.chunk.js.LICENSE.txt",
     "static/js/3.07878857.chunk.js.LICENSE.txt": "/sample-bucket/static/js/3.07878857.chunk.js.LICENSE.txt",
     "static/media/Clap.26f018a0.wav": "/sample-bucket/static/media/Clap.26f018a0.wav",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.ca847c1d.js",
     "static/js/2.276783df.chunk.js",
-    "static/css/main.43845ab5.chunk.css",
-    "static/js/main.8fd0079d.chunk.js"
+    "static/css/main.792b0243.chunk.css",
+    "static/js/main.e2f3efb7.chunk.js"
   ]
 }
