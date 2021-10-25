@@ -62,15 +62,20 @@ export const Cart = () => {
             </p>
 
             <div className="quantity">
-              <ImArrowDown2
-                className="qty-icon"
-                onClick={() => handleQuantityMinus(item.id)}
-              />
+              <button className="quantity-btn">
+                <ImArrowDown2
+                  className="qty-icon"
+                  onClick={() => handleQuantityMinus(item.id)}
+                />
+              </button>
               <p className="item-card-price --qty">{`Qty: ${item.quantity}`}</p>
-              <ImArrowUp2
-                className="qty-icon"
-                onClick={() => handleQuantityPlus(item.id)}
-              />
+
+              <button className="quantity-btn">
+                <ImArrowUp2
+                  className="qty-icon"
+                  onClick={() => handleQuantityPlus(item.id)}
+                />
+              </button>
             </div>
 
             <p className="item-card-price">{`Subtotal: $${

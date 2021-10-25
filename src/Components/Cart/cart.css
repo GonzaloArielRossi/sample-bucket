@@ -92,3 +92,15 @@ Link:visited {
 .qty-icon {
   font-size: 1.8rem;
 }
+
+.quantity-btn {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.quantity-btn:hover,
+.quantity-btn:active {
+  background-color: #999;
+}
