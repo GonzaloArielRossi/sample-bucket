@@ -78,3 +78,17 @@ Link:visited {
 .--underline {
   text-decoration: underline;
 }
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.--qty {
+  margin-left: 0;
+}
+.qty-icon {
+  font-size: 1.8rem;
+}

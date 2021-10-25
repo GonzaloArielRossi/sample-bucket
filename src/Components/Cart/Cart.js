@@ -1,11 +1,24 @@
 import React, { useContext } from 'react';
 import { HiInformationCircle, HiTag } from 'react-icons/hi';
+import { ImArrowDown2, ImArrowUp2 } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
 import './cart.css';
 
 export const Cart = () => {
-  const { cart, emptyCart, removeItem, getTotal } = useContext(CartContext);
+  const { cart, setCart, emptyCart, removeItem, getTotal } =
+    useContext(CartContext);
+
+  const handleQuantity = (dir, id) => {
+    const op = dir === 'up' ? 1 : -1;
+    const newCart = [...cart];
+    newCart.map((item) => {
+      if (item.quantity > 1) {
+        item.id === id && (item.quantity += op);
+      }
+    });
+    setCart(newCart);
+  };
 
   return cart.length === 0 ? (
     <div className="cart-empty-flex">
@@ -33,13 +46,25 @@ export const Cart = () => {
               <p className="item-card-product-name">{item.name}</p>
             </Link>
             <p className="item-card-description">
-              <HiInformationCircle className="item-card-icon" />{' '}
+              <HiInformationCircle className="item-card-icon" />
               {item.description}
             </p>
             <p className="item-card-price ">
               <HiTag className="item-card-icon" /> ${item.price}
             </p>
-            <p className="item-card-price">{`Qty: ${item.quantity}`}</p>
+
+            <div className="quantity">
+              <ImArrowDown2
+                className="qty-icon"
+                onClick={() => handleQuantity('down', item.id)}
+              />
+              <p className="item-card-price --qty">{`Qty: ${item.quantity}`}</p>
+              <ImArrowUp2
+                className="qty-icon"
+                onClick={() => handleQuantity('up', item.id)}
+              />
+            </div>
+
             <p className="item-card-price">{`Subtotal: $${
               item.quantity * item.price
             }`}</p>
