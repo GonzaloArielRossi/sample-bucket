@@ -9,12 +9,20 @@ export const Cart = () => {
   const { cart, setCart, emptyCart, removeItem, getTotal } =
     useContext(CartContext);
 
-  const handleQuantity = (dir, id) => {
-    const op = dir === 'up' ? 1 : -1;
+  const handleQuantityMinus = (id) => {
     const newCart = [...cart];
     newCart.map((item) => {
       if (item.quantity > 1) {
-        item.id === id && (item.quantity += op);
+        item.id === id && (item.quantity -= 1);
+      }
+    });
+    setCart(newCart);
+  };
+  const handleQuantityPlus = (id) => {
+    const newCart = [...cart];
+    newCart.map((item) => {
+      if (item.quantity < item.stock) {
+        item.id === id && (item.quantity += 1);
       }
     });
     setCart(newCart);
@@ -56,12 +64,12 @@ export const Cart = () => {
             <div className="quantity">
               <ImArrowDown2
                 className="qty-icon"
-                onClick={() => handleQuantity('down', item.id)}
+                onClick={() => handleQuantityMinus(item.id)}
               />
               <p className="item-card-price --qty">{`Qty: ${item.quantity}`}</p>
               <ImArrowUp2
                 className="qty-icon"
-                onClick={() => handleQuantity('up', item.id)}
+                onClick={() => handleQuantityPlus(item.id)}
               />
             </div>
 
