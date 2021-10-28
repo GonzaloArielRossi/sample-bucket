@@ -16,9 +16,9 @@ export const Item = ({
   return (
     <div className="item-card --scale">
       <img
-        src={img}
         alt={`${name} ${description}`}
         className="item-card-img"
+        src={img}
       ></img>
       <p className={`item-card-category --${category}`}>
         {category.toUpperCase()}
@@ -33,7 +33,7 @@ export const Item = ({
       <p className="stock-details --left-margin">
         {stock ? `Stock: ${stock}` : 'Out of stock'}
       </p>
-      <Link to={`/productDetails/${id}`} className="item-card-btn">
+      <Link className="item-card-btn" to={`/productDetails/${id}`}>
         TRY PACK
       </Link>
     </div>

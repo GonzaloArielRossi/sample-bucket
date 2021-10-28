@@ -1,3 +1,4 @@
+/* eslint space-before-function-paren: "off" */
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -5,6 +6,7 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
+
 import { NavBar } from './Components/NavBar/NavBar';
 import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer';

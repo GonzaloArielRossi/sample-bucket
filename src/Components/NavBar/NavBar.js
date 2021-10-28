@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import navLogo from '../../Assets/Images/nav-logo.png';
-import { CartWidget } from './CartWidget';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+
+import navLogo from '../../Assets/Images/nav-logo.png';
 import { CartContext } from '../../Context/CartContext';
+
+import { CartWidget } from './CartWidget';
 
 import './NavBar.css';
 
@@ -14,45 +16,45 @@ export const NavBar = () => {
   const navClasses = ['nav-link', !showCart && '--margin-rigth'];
 
   useEffect(() => {
-    setShowCart(cart.length != 0);
+    setShowCart(cart.length !== 0);
   }, [cart]);
 
   return (
     <header>
       <nav className={`nav-menu ${location === '/' && '--home'}`}>
-        <Link to="/" className="nav-logo-link">
-          <img src={navLogo} alt="sample bucket logo" className="nav-logo" />
+        <Link className="nav-logo-link" to="/">
+          <img alt="sample bucket logo" className="nav-logo" src={navLogo} />
         </Link>
         <NavLink
-          to="/home"
           activeClassName="nav-active-link"
           className="nav-link"
+          to="/home"
         >
           Home
         </NavLink>
         <NavLink
-          to="/products"
           activeClassName="nav-active-link"
           className="nav-link"
+          to="/products"
         >
           Products
         </NavLink>
         <NavLink
-          to="/login"
           activeClassName="nav-active-link"
           className="nav-link"
+          to="/login"
         >
           Login
         </NavLink>
         <NavLink
-          to="/sign-up"
           activeClassName="nav-active-link"
           className={navClasses.join(' ')}
+          to="/sign-up"
         >
           Sign-Up
         </NavLink>
         {showCart && (
-          <NavLink to="/cart" className="nav-link">
+          <NavLink className="nav-link" to="/cart">
             <CartWidget />
           </NavLink>
         )}

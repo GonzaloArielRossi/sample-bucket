@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { HiTag, HiInformationCircle, HiArrowSmLeft } from 'react-icons/hi';
+import { HiTag, HiInformationCircle } from 'react-icons/hi';
 import './ItemDetail.css';
 
 export const ItemDetail = ({
@@ -16,9 +15,9 @@ export const ItemDetail = ({
       <div>
         <div className="item-card --detail ">
           <img
-            src={img}
             alt={`${name} ${description}`}
             className="item-card-img --img"
+            src={img}
           ></img>
 
           <p className={`item-card-category --${category}`}>{category} </p>

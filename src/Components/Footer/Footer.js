@@ -1,5 +1,4 @@
 import React from 'react';
-import FooterLogo from '../../Assets/Images/nav-logo.png';
 import {
   TiSocialFacebook,
   TiSocialTwitter,
@@ -7,6 +6,8 @@ import {
 } from 'react-icons/ti';
 import { AiFillInstagram } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+
+import FooterLogo from '../../Assets/Images/nav-logo.png';
 import './Footer.css';
 
 export const Footer = () => {
@@ -15,9 +16,9 @@ export const Footer = () => {
       <div className="footer-grid-container">
         <div className="footer-first-column">
           <img
-            src={FooterLogo}
             alt="sample bucket logo"
             className="footer-logo"
+            src={FooterLogo}
           ></img>
           <div className="footer-socials-flex">
             <TiSocialFacebook className="footer-socials-logo" />
@@ -42,37 +43,37 @@ export const Footer = () => {
         </div>
         <div className="footer-column">
           <p className="footer-title">Account</p>
-          <Link to="/sign-up" className="footer-link">
+          <Link className="footer-link" to="/sign-up">
             Create Account
           </Link>
-          <Link to="/login" className="footer-link">
+          <Link className="footer-link" to="/login">
             Login
           </Link>
-          <Link to="/cart" className="footer-link">
+          <Link className="footer-link" to="/cart">
             Cart
           </Link>
         </div>
         <div className="footer-column">
           <p className="footer-title">Company</p>
-          <Link to="/-up" className="footer-link">
+          <Link className="footer-link" to="/-up">
             About <span translate="no">Sample Bucket</span>
           </Link>
-          <Link to="/" className="footer-link">
+          <Link className="footer-link" to="/">
             Testimonials
           </Link>
-          <Link to="/" className="footer-link">
+          <Link className="footer-link" to="/">
             Featured In
           </Link>
         </div>
         <div className="footer-column">
           <p className="footer-title">Our Products</p>
-          <Link to="/products/TRAP" className="footer-link">
+          <Link className="footer-link" to="/products/TRAP">
             Trap Loops
           </Link>
-          <Link to="/products/RAP" className="footer-link">
+          <Link className="footer-link" to="/products/RAP">
             Rap Loops
           </Link>
-          <Link to="/products/DRILL" className="footer-link">
+          <Link className="footer-link" to="/products/DRILL">
             Drill Loops
           </Link>
         </div>

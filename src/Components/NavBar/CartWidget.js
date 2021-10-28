@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+
 import { CartContext } from '../../Context/CartContext';
 
 export const CartWidget = () => {

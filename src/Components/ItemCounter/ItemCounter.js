@@ -7,20 +7,21 @@ export const ItemCounter = ({ quantity, setQuantity, stock, outOfStock }) => {
     '--quantity',
     outOfStock && '--disabled'
   ];
+
   return (
     <div className="item-counter-flex">
       <button
         className={cartBtnClasses.join(' ')}
-        onClick={() => quantity > 1 && setQuantity(quantity - 1)}
         disabled={outOfStock}
+        onClick={() => quantity > 1 && setQuantity(quantity - 1)}
       >
         -
       </button>
       <p className="item-details-counter">{quantity}</p>
       <button
         className={cartBtnClasses.join(' ')}
-        onClick={() => quantity < stock && setQuantity(quantity + 1)}
         disabled={outOfStock}
+        onClick={() => quantity < stock && setQuantity(quantity + 1)}
       >
         +
       </button>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Billboard from '../../Assets/Images/featured-logos/billboard.svg';
 import Complex from '../../Assets/Images/featured-logos/complex.svg';
 import TheVerge from '../../Assets/Images/featured-logos/theverge.svg';
@@ -14,29 +15,29 @@ export const Featured = () => {
           <div className="features-logo-flex">
             <h2 className="features-title">FEATURED IN</h2>
             <img
+              alt="billboard logo"
+              className="features-img"
               src={Billboard}
-              alt="billboard logo"
-              className="features-img"
             ></img>
             <img
+              alt="billboard logo"
+              className="features-img"
               src={Complex}
-              alt="billboard logo"
-              className="features-img"
             ></img>
             <img
+              alt="billboard logo"
+              className="features-img"
               src={TheVerge}
-              alt="billboard logo"
-              className="features-img"
             ></img>
             <img
+              alt="billboard logo"
+              className="features-img"
               src={Variety}
-              alt="billboard logo"
-              className="features-img"
             ></img>
             <img
-              src={Wired}
               alt="billboard logo"
               className="features-img"
+              src={Wired}
             ></img>
           </div>
         </div>

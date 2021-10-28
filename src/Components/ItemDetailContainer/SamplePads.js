@@ -1,6 +1,8 @@
 import React from 'react';
-import { useKeyPress } from '../../Hooks/padKeyPress';
 import useSound from 'use-sound';
+import { BsPlayCircle } from 'react-icons/bs';
+
+import { useKeyPress } from '../../Hooks/padKeyPress';
 import {
   Kick,
   HhClosed,
@@ -9,7 +11,7 @@ import {
   TomOne,
   TomTwo
 } from '../../Assets/Audio';
-import { BsPlayCircle } from 'react-icons/bs';
+
 import './SamplePads.css';
 
 export const SamplePads = () => {
@@ -21,7 +23,6 @@ export const SamplePads = () => {
     pad5: useKeyPress('g'),
     pad6: useKeyPress('h')
   };
-
   const cssClasses = {
     pad1: ['pad', keyPresses.pad1 && 'on-play'],
     pad2: ['pad', keyPresses.pad2 && 'on-play'],
@@ -30,7 +31,6 @@ export const SamplePads = () => {
     pad5: ['pad', keyPresses.pad5 && 'on-play'],
     pad6: ['pad', keyPresses.pad6 && 'on-play']
   };
-
   const [playPad1] = useSound(Kick, { interrupt: true });
   const [playPad2] = useSound(HhClosed, { interrupt: true });
   const [playPad3] = useSound(Snare, { interrupt: true });

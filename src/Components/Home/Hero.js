@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import logo from '../../Assets/Images/logo.png';
 import './Hero.css';
 
@@ -17,12 +18,12 @@ export const Hero = () => {
               samples, easy. Simple, yet robust kits, made by industry leaders.
             </h2>
             {/* <button className="hero-info-btn --cta">Check Our Products</button> */}
-            <Link to={`/products`} className="hero-info-btn --cta">
+            <Link className="hero-info-btn --cta" to={'/products'}>
               Try Sample Packs
             </Link>
             <span className="hero-info-btn --more-info">Learn More 👇</span>
           </div>
-          <img src={logo} className="hero-image"></img>
+          <img className="hero-image" src={logo}></img>
         </div>
       </div>
     </section>

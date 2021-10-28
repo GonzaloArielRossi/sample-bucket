@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { ItemList } from './ItemList';
 import { useParams, NavLink } from 'react-router-dom';
+
 import { getFirestore } from '../../Firebase/config';
 import { Spinner } from '../Spinner/Spinner';
+
+import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
-
   const { categoryId } = useParams();
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export const ItemListContainer = () => {
           id: doc.id,
           ...doc.data()
         }));
+
         setItems(newItems);
       })
       .catch((err) => console.error(err))
@@ -38,30 +40,30 @@ export const ItemListContainer = () => {
         <p>Filter by genre:</p>
         <NavLink
           exact
-          to="/products"
           activeClassName="article-category-active"
           className="article-category-link"
+          to="/products"
         >
           All
         </NavLink>
         <NavLink
-          to="/products/RAP"
           activeClassName="article-category-active"
           className="article-category-link"
+          to="/products/RAP"
         >
           Rap
         </NavLink>
         <NavLink
-          to="/products/TRAP"
           activeClassName="article-category-active"
           className="article-category-link"
+          to="/products/TRAP"
         >
           Trap
         </NavLink>
         <NavLink
-          to="/products/DRILL"
           activeClassName="article-category-active"
           className="article-category-link"
+          to="/products/DRILL"
         >
           Drill
         </NavLink>

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
+import { HiArrowSmLeft } from 'react-icons/hi';
+
+import { Spinner } from '../Spinner/Spinner';
+import { getFirestore } from '../../Firebase/config';
+
 import { ItemDetail } from './ItemDetail';
 import { SamplePads } from './SamplePads';
-import { getFirestore } from '../../Firebase/config';
 import { CartControls } from './CartControls';
+
 import './ItemDetailContainer.css';
-import { HiArrowSmLeft } from 'react-icons/hi';
-import { Spinner } from '../Spinner/Spinner';
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);

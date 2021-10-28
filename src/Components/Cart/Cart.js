@@ -2,15 +2,16 @@ import React, { useContext } from 'react';
 import { HiInformationCircle, HiTag } from 'react-icons/hi';
 import { ImArrowDown2, ImArrowUp2 } from 'react-icons/im';
 import { Link } from 'react-router-dom';
+
 import { CartContext } from '../../Context/CartContext';
 import './cart.css';
 
 export const Cart = () => {
   const { cart, setCart, emptyCart, removeItem, getTotal } =
     useContext(CartContext);
-
   const handleQuantityMinus = (id) => {
     const newCart = [...cart];
+
     newCart.map((item) => {
       if (item.quantity > 1) {
         item.id === id && (item.quantity -= 1);
@@ -20,6 +21,7 @@ export const Cart = () => {
   };
   const handleQuantityPlus = (id) => {
     const newCart = [...cart];
+
     newCart.map((item) => {
       if (item.quantity < item.stock) {
         item.id === id && (item.quantity += 1);
@@ -31,7 +33,7 @@ export const Cart = () => {
   return cart.length === 0 ? (
     <div className="cart-empty-flex">
       <h2 className="cart-empty-title">Your cart is empty</h2>
-      <Link to="/products" className="btn-item-cart-delete --center">
+      <Link className="btn-item-cart-delete --center" to="/products">
         Check our products
       </Link>
     </div>
@@ -40,16 +42,16 @@ export const Cart = () => {
       {cart.map((item, key) => (
         <div key={key}>
           <div className="item-cart-flex">
-            <Link to={`/productDetails/${item.id}`} className="nav-link">
+            <Link className="nav-link" to={`/productDetails/${item.id}`}>
               <img
-                src={item.img}
                 alt={`${item.name} ${item.description}`}
                 className="item-card-img --cart"
+                src={item.img}
               ></img>
             </Link>
             <Link
-              to={`/productDetails/${item.id}`}
               className="nav-link --underline"
+              to={`/productDetails/${item.id}`}
             >
               <p className="item-card-product-name">{item.name}</p>
             </Link>

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import { ItemCounter } from '../ItemCounter/ItemCounter';
 import { CartContext } from '../../Context/CartContext';
 
@@ -17,13 +18,12 @@ export const CartControls = ({
   const [outOfStock, setOutOfStock] = useState(true);
 
   useEffect(() => {
-    stock == 0 ? setOutOfStock(true) : setOutOfStock(false);
+    stock === 0 ? setOutOfStock(true) : setOutOfStock(false);
   }, [outOfStock, stock]);
 
   const [quantity, setQuantity] = useState(1);
   const { addToCart, isInCart, cart, setCart } = useContext(CartContext);
   const cartBtnClasses = ['item-details-btn', outOfStock && '--disabled'];
-
   const handleAddItemToCart = () => {
     if (!isInCart(id)) {
       const newItem = {
@@ -37,17 +37,18 @@ export const CartControls = ({
         details,
         quantity
       };
+
       addToCart(newItem);
     } else {
       const newCart = [...cart];
+
       newCart.forEach((item) => modifyCartItem(item));
       setCart(newCart);
     }
     setQuantity(1);
   };
-
   const modifyCartItem = (item) => {
-    if (item.id == id) {
+    if (item.id === id) {
       item.quantity += quantity;
     }
   };
@@ -55,24 +56,24 @@ export const CartControls = ({
   return (
     <div className="cart-controls">
       <ItemCounter
+        outOfStock={outOfStock}
         quantity={quantity}
         setQuantity={setQuantity}
         stock={stock}
-        outOfStock={outOfStock}
       />
 
       <button
         className={cartBtnClasses.join(' ')}
-        onClick={handleAddItemToCart}
         disabled={outOfStock}
+        onClick={handleAddItemToCart}
       >
         {isInCart(id) ? 'ADD MORE' : 'ADD TO CART'}
       </button>
 
       <Link
-        to={outOfStock ? '#' : '/cart'}
         className={cartBtnClasses.join(' ')}
         disabled={outOfStock}
+        to={outOfStock ? '#' : '/cart'}
         onClick={!isInCart(id) && handleAddItemToCart}
       >
         BUY
