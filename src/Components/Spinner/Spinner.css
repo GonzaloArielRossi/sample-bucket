@@ -1,3 +1,14 @@
+.spinner-flex {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.spinner-text {
+  text-align: center;
+}
+
 .spin {
   display: inline-block;
   width: 10rem;
@@ -8,6 +19,7 @@
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
   margin-top: 4rem;
+  align-self: center;
 }
 @keyframes spin {
   to {

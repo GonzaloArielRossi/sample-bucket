@@ -3,9 +3,11 @@ import './Spinner.css';
 
 export const Spinner = () => {
   return (
-    <>
-      <h2>Loading...</h2>
-      <div className="spin"></div>
-    </>
+    <div className="spinner-main">
+      <div className="spinner-flex">
+        <h2 className="spinner-text">Loading...</h2>
+        <div className="spin"></div>
+      </div>
+    </div>
   );
 };

@@ -8,7 +8,7 @@ export const CartWidget = () => {
 
   return (
     <div className="shopping-cart-combo">
-      <HiOutlineShoppingCart alt="shopping cart" className="shopping-cart" />
+      <HiOutlineShoppingCart alt="shopping cart" className="nav-icon" />
       <p className="items-in-cart">{getQuantity()}</p>
     </div>
   );

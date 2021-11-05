@@ -2,19 +2,13 @@ import React from 'react';
 import useSound from 'use-sound';
 import { BsPlayCircle } from 'react-icons/bs';
 
+import { itemDetailsPadsInfo } from '../../Helpers/itemDetailsPadsInfo';
 import { useKeyPress } from '../../Hooks/padKeyPress';
-import {
-  Kick,
-  HhClosed,
-  Snare,
-  Clap,
-  TomOne,
-  TomTwo
-} from '../../Assets/Audio';
 
 import './SamplePads.css';
 
-export const SamplePads = () => {
+export const SamplePads = ({ itemId }) => {
+  const padData = itemDetailsPadsInfo(itemId);
   const keyPresses = {
     pad1: useKeyPress('a'),
     pad2: useKeyPress('s'),
@@ -31,17 +25,27 @@ export const SamplePads = () => {
     pad5: ['pad', keyPresses.pad5 && 'on-play'],
     pad6: ['pad', keyPresses.pad6 && 'on-play']
   };
-  const [playPad1] = useSound(Kick, { interrupt: true });
-  const [playPad2] = useSound(HhClosed, { interrupt: true });
-  const [playPad3] = useSound(Snare, { interrupt: true });
-  const [playPad4] = useSound(Clap, { interrupt: true });
-  const [playPad5] = useSound(TomOne, { interrupt: true });
-  const [playPad6] = useSound(TomTwo, { interrupt: true });
+  const [playPad1] = useSound(padData.data.kick);
+  const [playPad2] = useSound(padData.data.hhClosed);
+  const [playPad3] = useSound(padData.data.snare);
+  const [playPad4] = useSound(padData.data.hhOpen);
+  const [playPad5] = useSound(padData.data.perc);
+  const [playPad6] = useSound(padData.data.cymbal);
 
   return (
     <div className="sample-pads-grid-main">
       <div className="sample-pads-grid-container">
-        <p className="pads-title">Try this kit using your keyboard!</p>
+        <div className="pads-loop-main">
+          <p className="pads-title">Try this kit using your keyboard!</p>
+          <audio
+            controls
+            loop
+            className="pads-loop "
+            src={padData.data.loop}
+          ></audio>
+          <p className="pad-info --no-margin">Play Melody in loop</p>
+        </div>
+
         <div className={cssClasses.pad1.join(' ')}>
           <BsPlayCircle className="pad-icon" />
           {keyPresses.pad1 && playPad1()}
@@ -50,7 +54,7 @@ export const SamplePads = () => {
         <div className={cssClasses.pad2.join(' ')}>
           <BsPlayCircle className="pad-icon" />
           {keyPresses.pad2 && playPad2()}
-          <p className="pad-info">HH | Key: S</p>
+          <p className="pad-info">HH Closed | Key: S</p>
         </div>
         <div className={cssClasses.pad3.join(' ')}>
           <BsPlayCircle className="pad-icon" />
@@ -61,17 +65,17 @@ export const SamplePads = () => {
         <div className={cssClasses.pad4.join(' ')}>
           <BsPlayCircle className="pad-icon" />
           {keyPresses.pad4 && playPad4()}
-          <p className="pad-info">Clap | Key:F</p>
+          <p className="pad-info">HH open | Key:F</p>
         </div>
         <div className={cssClasses.pad5.join(' ')}>
           <BsPlayCircle className="pad-icon" />
           {keyPresses.pad5 && playPad5()}
-          <p className="pad-info">Tom 1 | Key: G</p>
+          <p className="pad-info">Perc | Key: G</p>
         </div>
         <div className={cssClasses.pad6.join(' ')}>
           <BsPlayCircle className="pad-icon" />
           {keyPresses.pad6 && playPad6()}
-          <p className="pad-info">Tom 2 | Key: H</p>
+          <p className="pad-info">Cymbal | Key: H</p>
         </div>
       </div>
     </div>

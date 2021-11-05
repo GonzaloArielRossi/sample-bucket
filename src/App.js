@@ -14,55 +14,70 @@ import { HomeContainer } from './Components/Home/HomeContainer';
 import { Footer } from './Components/Footer/Footer';
 import { Cart } from './Components/Cart/Cart';
 import { CartProvider } from './Context/CartContext';
+import { Checkout } from './Components/Checkout/Checkout';
 import './App.css';
+import { UserAuthProvider } from './Context/UserAuthContext';
+import { Login } from './Components/UserAuthenticate/Login';
+import { SignUp } from './Components/UserAuthenticate/SignUp';
+import { Orders } from './Components/Orders/Orders';
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <HomeContainer />
-            <Footer />
-          </Route>
+    <UserAuthProvider>
+      <CartProvider>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <HomeContainer />
+              <Footer />
+            </Route>
 
-          <Route exact path="/products">
-            <ItemListContainer />
-            <Footer />
-          </Route>
+            <Route exact path="/products">
+              <ItemListContainer />
+              <Footer />
+            </Route>
 
-          <Route exact path="/products/:categoryId">
-            <ItemListContainer />
-            <Footer />
-          </Route>
+            <Route exact path="/products/:categoryId">
+              <ItemListContainer />
+              <Footer />
+            </Route>
 
-          <Route exact path="/productDetails/:itemId">
-            <ItemDetailContainer />
-            <Footer />
-          </Route>
+            <Route exact path="/productDetails/:itemId">
+              <ItemDetailContainer />
+              <Footer />
+            </Route>
 
-          <Route path="/login">
-            <h1>Login Page</h1>
-            <Footer />
-          </Route>
+            <Route path="/login">
+              <Login />
+              <Footer />
+            </Route>
 
-          <Route path="/sign-up">
-            <h1>Sign-Up Page</h1>
-            <Footer />
-          </Route>
+            <Route path="/signUp">
+              <SignUp />
+              <Footer />
+            </Route>
 
-          <Route path="/cart">
-            <Cart />
-            <Footer />
-          </Route>
+            <Route path="/cart">
+              <Cart />
+              <Footer />
+            </Route>
 
-          <Route path="*">
-            <Redirect to="/"></Redirect>
-          </Route>
-        </Switch>
-      </Router>
-    </CartProvider>
+            <Route exact path="/checkout">
+              <Checkout />
+            </Route>
+
+            <Route exact path="/orders">
+              <Orders />
+            </Route>
+
+            <Route path="*">
+              <Redirect to="/"></Redirect>
+            </Route>
+          </Switch>
+        </Router>
+      </CartProvider>
+    </UserAuthProvider>
   );
 }
 

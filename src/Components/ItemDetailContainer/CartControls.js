@@ -76,7 +76,7 @@ export const CartControls = ({
         to={outOfStock ? '#' : '/cart'}
         onClick={!isInCart(id) && handleAddItemToCart}
       >
-        BUY
+        {isInCart(id) ? 'GO TO CART' : 'BUY'}
       </Link>
 
       <p className="stock-details">

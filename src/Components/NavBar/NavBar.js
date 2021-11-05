@@ -1,23 +1,29 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { BiUserCircle } from 'react-icons/bi';
 
 import navLogo from '../../Assets/Images/nav-logo.png';
 import { CartContext } from '../../Context/CartContext';
-
-import { CartWidget } from './CartWidget';
+import { UserAuthContext } from '../../Context/UserAuthContext';
 
 import './NavBar.css';
+import { CartWidget } from './CartWidget';
+import { UserWidget } from './UserWidget';
 
 export const NavBar = () => {
-  // Get current location to change de nav background color
   const location = useLocation().pathname;
   const { cart } = useContext(CartContext);
   const [showCart, setShowCart] = useState(false);
-  const navClasses = ['nav-link', !showCart && '--margin-rigth'];
+  const [showUserMenu, setShowUserMenu] = useState(false);
 
   useEffect(() => {
     setShowCart(cart.length !== 0);
   }, [cart]);
+
+  const handleShowUserMenu = () => {
+    setShowUserMenu(!showUserMenu);
+  };
+  const { isAuthenticated } = useContext(UserAuthContext);
 
   return (
     <header>
@@ -32,31 +38,54 @@ export const NavBar = () => {
         >
           Home
         </NavLink>
-        <NavLink
-          activeClassName="nav-active-link"
-          className="nav-link"
-          to="/products"
-        >
-          Products
-        </NavLink>
-        <NavLink
-          activeClassName="nav-active-link"
-          className="nav-link"
-          to="/login"
-        >
-          Login
-        </NavLink>
-        <NavLink
-          activeClassName="nav-active-link"
-          className={navClasses.join(' ')}
-          to="/sign-up"
-        >
-          Sign-Up
-        </NavLink>
+
+        <div>
+          <NavLink
+            activeClassName="nav-active-link"
+            className="nav-link"
+            to="/products"
+          >
+            Products
+          </NavLink>
+        </div>
+
+        {isAuthenticated && (
+          <NavLink
+            activeClassName={'nav-active-link'}
+            className="nav-link"
+            to="/orders"
+          >
+            My orders
+          </NavLink>
+        )}
+
+        {!isAuthenticated && (
+          <NavLink
+            activeClassName={'nav-active-link'}
+            className={`nav-link ${showCart ? '' : '--margin-rigth'}`}
+            to="/login"
+          >
+            Login / Sign-Up
+          </NavLink>
+        )}
+
         {showCart && (
-          <NavLink className="nav-link" to="/cart">
+          <NavLink
+            className={`nav-link ${isAuthenticated ? '' : '--margin-rigth'}`}
+            to="/cart"
+          >
             <CartWidget />
           </NavLink>
+        )}
+        {isAuthenticated && (
+          <>
+            <BiUserCircle
+              alt="user panel"
+              className={'nav-icon  --margin-rigth --user'}
+              onClick={handleShowUserMenu}
+            />
+            <UserWidget showUserMenu={showUserMenu} />
+          </>
         )}
       </nav>
     </header>

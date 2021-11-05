@@ -97,7 +97,9 @@ export const Cart = () => {
         <button className="btn-item-cart-delete" onClick={emptyCart}>
           Empty Cart
         </button>
-        <button className="btn-item-cart-delete">Proceed to checkout</button>
+        <Link className="nav-link btn-item-cart-delete" to={'/checkout'}>
+          Proceed to checkout
+        </Link>
       </div>
     </div>
   );

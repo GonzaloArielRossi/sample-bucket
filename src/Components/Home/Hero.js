@@ -17,7 +17,6 @@ export const Hero = () => {
               The best choice for making the tedious process of picking your
               samples, easy. Simple, yet robust kits, made by industry leaders.
             </h2>
-            {/* <button className="hero-info-btn --cta">Check Our Products</button> */}
             <Link className="hero-info-btn --cta" to={'/products'}>
               Try Sample Packs
             </Link>

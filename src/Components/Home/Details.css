@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 16rem 0 16rem 0;
   color: #888;
+  margin-bottom: 1rem;
 }
 .details-grid-container {
   display: grid;

@@ -17,9 +17,9 @@ module.exports = {
     semi: ['error', 'always'],
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'always', prev: 'function', next: '*' },
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'always', prev: 'import', next: ['const', 'let', 'var'] },
       {
         blankLine: 'never',
         prev: ['const', 'let', 'var'],
@@ -28,7 +28,9 @@ module.exports = {
     ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'no-async-promise-executor': ['off', 'always'],
     'multiline-ternary': ['off', 'always'],
+    'no-unused-vars': ['warn', 'all'],
     'array-callback-return': ['off', { allowImplicit: true }],
     'import/order': [
       'warn',

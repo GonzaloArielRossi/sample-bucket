@@ -9,7 +9,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
-  gap: 4.8rem;
+  gap: 3.2rem;
   padding: 2.4rem;
 }
 
@@ -20,6 +20,17 @@
   color: #fdf7ff;
   margin-bottom: 2.4rem;
   margin: 0 auto;
+}
+.pads-loop {
+  width: 85%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.pads-loop-main {
+  grid-column: 1/-1;
+  width: 100%;
+  color: #fdf7ff;
+  text-align: center;
 }
 .pad-info {
   color: #fdf7ff;
@@ -45,6 +56,10 @@
 }
 .on-play {
   animation: playPad 0.3s ease-out;
+}
+
+.--no-margin {
+  margin-bottom: 0;
 }
 
 @keyframes playPad {

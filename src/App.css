@@ -32,6 +32,9 @@ Bold: 700
 */
 
 /* HTML TAGS */
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   font-size: 3.6rem;
   text-align: center;
@@ -47,5 +50,22 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+}
+
+.swal2-popup {
+  font-size: 1.8rem !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.swal2-button {
+  border: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 4rem;
 }

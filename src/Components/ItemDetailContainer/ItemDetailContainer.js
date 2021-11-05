@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { HiArrowSmLeft } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 import { Spinner } from '../Spinner/Spinner';
 import { getFirestore } from '../../Firebase/config';
@@ -15,6 +16,8 @@ export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const { itemId } = useParams();
+  const [invalidId, setInvalidId] = useState(true);
+  const { goBack } = useHistory();
 
   useEffect(() => {
     setLoading(true);
@@ -26,10 +29,15 @@ export const ItemDetailContainer = () => {
     product
       .get()
       .then((doc) => {
-        setItem({
-          id: doc.id,
-          ...doc.data()
-        });
+        if (doc.data() === undefined) {
+          setInvalidId(true);
+        } else {
+          setItem({
+            id: doc.id,
+            ...doc.data()
+          });
+          setInvalidId(false);
+        }
       })
       .catch((err) => console.error(err))
       .finally(() => {
@@ -37,19 +45,40 @@ export const ItemDetailContainer = () => {
       });
   }, [itemId, setLoading]);
 
-  const { goBack } = useHistory();
-
   return (
-    <div className="item-details-main">
-      <div className="item-details-flex-container">
-        <HiArrowSmLeft
-          className="go-back-icon"
-          onClick={() => goBack()}
-        ></HiArrowSmLeft>
-        <div>{loading ? <Spinner /> : <ItemDetail {...item} />}</div>
-        <SamplePads />
-        <CartControls {...item} />
-      </div>
-    </div>
+    <>
+      {invalidId ? (
+        loading ? (
+          <div className="item-details-main">
+            <Spinner />
+          </div>
+        ) : (
+          <div className="invalid-main">
+            <div className="invalid-id">
+              <h2>Invalid ID</h2>
+              <Link className="form-submit-btn" id="return" to="/products">
+                Return to Products
+              </Link>
+            </div>
+          </div>
+        )
+      ) : loading ? (
+        <div className="item-details-main">
+          <Spinner />
+        </div>
+      ) : (
+        <div className="item-details-main">
+          <div className="item-details-flex-container">
+            <HiArrowSmLeft
+              className="go-back-icon"
+              onClick={() => goBack()}
+            ></HiArrowSmLeft>
+            <div>{<ItemDetail {...item} />}</div>
+            <SamplePads itemId={itemId} />
+            <CartControls {...item} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };

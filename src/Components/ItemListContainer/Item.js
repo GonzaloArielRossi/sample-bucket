@@ -15,11 +15,13 @@ export const Item = ({
 }) => {
   return (
     <div className="item-card --scale">
-      <img
-        alt={`${name} ${description}`}
-        className="item-card-img"
-        src={img}
-      ></img>
+      <Link to={`/productDetails/${id}`}>
+        <img
+          alt={`${name} ${description}`}
+          className="item-card-img"
+          src={img}
+        ></img>
+      </Link>
       <p className={`item-card-category --${category}`}>
         {category.toUpperCase()}
       </p>
