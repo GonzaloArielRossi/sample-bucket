@@ -18,7 +18,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 - Sample Pads
 
-![](https://i.imgur.com/utHMnjP.png)
+![](https://i.ibb.co/SRRKfr5/1234.png)
 
 <hr/>
 
