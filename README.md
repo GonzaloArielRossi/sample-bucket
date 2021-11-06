@@ -18,7 +18,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 - Sample Pads
 
-![](https://firebasestorage.googleapis.com/v0/b/sample-bucket-5d173.appspot.com/o/Misc%2Freadme%20pads.png?)
+![](https://firebasestorage.googleapis.com/v0/b/sample-bucket-5d173.appspot.com/o/Misc%2Freadme%20pads.png)
 
 <hr/>
 
