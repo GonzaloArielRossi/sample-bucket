@@ -5,7 +5,6 @@ import { ItemCounter } from '../ItemCounter/ItemCounter';
 import { CartContext } from '../../Context/CartContext';
 
 export const CartControls = ({
-  key,
   id,
   name,
   description,

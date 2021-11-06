@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 
-import { Footer } from '../Footer/Footer';
-
 import { Featured } from './Featured';
 import { Hero } from './Hero';
 import { Details } from './Details';

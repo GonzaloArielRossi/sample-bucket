@@ -3,7 +3,7 @@ import useSound from 'use-sound';
 import { BsPlayCircle } from 'react-icons/bs';
 
 import { itemDetailsPadsInfo } from '../../Helpers/itemDetailsPadsInfo';
-import { useKeyPress } from '../../Hooks/padKeyPress';
+import { useKeyPress } from '../../Helpers/padKeyPress';
 
 import './SamplePads.css';
 
