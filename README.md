@@ -1,7 +1,5 @@
 # Sample Bucket
 
-![](https://thumbs.dreamstime.com/b/under-construction-10012274.jpg)
-
 ## Credits
 
 - **Academy:** CoderHouse.
@@ -20,18 +18,20 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 - Sample Pads
 
-![](https://i.imgur.com/vmWxISg.png)
+![](https://firebasestorage.googleapis.com/v0/b/sample-bucket-5d173.appspot.com/o/Misc%2Freadme%20pads.png?)
 
 <hr/>
 
-## Dev Dependencies
+## Dependencies
 
 - React-use-sound
 - React-router-dom
 - Eslint
-- Eslint-plugin-prettier
+- Prettier
 - React-icons
 - Gh-pages
+- Firebase v8.10.0
+- Sweet Alert 2
 
 <hr/>
 
@@ -48,16 +48,18 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
   <br/> Code formating.
 - React-icons
   <br/> Icon library
-  <br/>+info: https://react-icons.github.io/react-icons/
+  <br/>+info: https://react-icons.github.io/react-icons
 - Gh-pages
   <br/> Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).
   <br/>+info: https://www.npmjs.com/package/gh-pages
-
+- Sweet Alert 2
+<br/> A responsive, customizable, accessible replacement for javascript's popup boxes
+<br/>+info: https://sweetalert2.github.io
 <hr/>
 
 ## Navigation
 
-<img src="https://media.giphy.com/media/4Ohh1RPhOI2d53NT0V/giphy.gif" width= "100%" />
+<img src="https://firebasestorage.googleapis.com/v0/b/sample-bucket-5d173.appspot.com/o/Misc%2Fsamplebucket.gif" width= "100%" />
 
 <hr/>
 
@@ -73,4 +75,6 @@ https://gonzaloarielrossi.github.io/sample-bucket/
 
 Both the "testimonials" and "featured in" sections of this site are 100% ficticial. The artists and companies mentioned are not related to this website and are meant solely as examples.
 
-The samples are not of my composition, and are Royalty Free.
+The samples are not of my composition, and are Royalty Free (Cymatics - Trap Starter Pack).
+
+All product images are made by me.

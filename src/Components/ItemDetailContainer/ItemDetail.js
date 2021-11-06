@@ -1,8 +1,8 @@
+import React from 'react';
 import { HiTag, HiInformationCircle } from 'react-icons/hi';
 import './ItemDetail.css';
 
 export const ItemDetail = ({
-  key,
   name,
   description,
   category,
