@@ -59,7 +59,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 ## Navigation
 
-<img src="https://i.ibb.co/CK26tFk/samplebucket.gif" width= "100%" />
+<img src="https://ibb.co/b5JF3nS" width= "100%" />
 
 <hr/>
 
