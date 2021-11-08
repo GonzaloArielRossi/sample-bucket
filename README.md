@@ -8,6 +8,20 @@
 
 <hr/>
 
+## Live Version
+
+Check out a live version of the site, hosted on github pages.
+
+https://gonzaloarielrossi.github.io/sample-bucket/
+
+<hr/>
+
+## Env variables
+
+Firebase credentials: https://pastebin.com/qURNiCL5 (password needed)
+
+<hr/>
+
 ## Overview
 
 Sample bucket emulates a website dedicated to the sale of audio loops and samples, with one unique feature that's never been implemented before in similar sites. You can actually play different sounds using your keyboard directly on the web, without the need to download any files.
@@ -19,6 +33,12 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 - Sample Pads
 
 ![](https://i.ibb.co/SRRKfr5/1234.png)
+
+<hr/>
+
+## Linting
+
+I created my own Eslint config for this project, check it out here: https://github.com/GonzaloArielRossi/eslint-config
 
 <hr/>
 
@@ -40,7 +60,6 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 - React-use-sound:
   <br/>It's in charge of playing audio samples.
   <br/>+info: https://github.com/joshwcomeau/use-sound
-
 - React-router-dom
   <br/>For navigation purposes.
   <br/>+info: https://reactrouter.com/web/guides/quick-start
@@ -59,15 +78,7 @@ Sample bucket emulates a website dedicated to the sale of audio loops and sample
 
 ## Navigation
 
-<img src="https://ibb.co/b5JF3nS" width= "100%" />
-
-<hr/>
-
-## Live Version
-
-Check out a live version of the site, hosted on github pages.
-
-https://gonzaloarielrossi.github.io/sample-bucket/
+<img src="https://imgur.com/OgBeubV.gif" width= "100%" />
 
 <hr/>
 
@@ -75,6 +86,6 @@ https://gonzaloarielrossi.github.io/sample-bucket/
 
 Both the "testimonials" and "featured in" sections of this site are 100% ficticial. The artists and companies mentioned are not related to this website and are meant solely as examples.
 
-The samples are not of my composition, and are Royalty Free (Cymatics - Trap Starter Pack).
+All sounds used in the site are from Cymatics - Trap Starter Pack (copyright free).
 
-All product images are made by me.
+Product images and logos are made by me.
