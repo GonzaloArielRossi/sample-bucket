@@ -4,7 +4,7 @@ import { ImArrowDown2, ImArrowUp2 } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 
 import { CartContext } from '../../Context/CartContext';
-import './cart.css';
+import './Cart.css';
 
 export const Cart = () => {
   const { cart, setCart, emptyCart, removeItem, getTotal } =
