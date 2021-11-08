@@ -78,7 +78,7 @@ I created my own Eslint config for this project, check it out here: https://gith
 
 ## Navigation
 
-<img src="https://imgur.com/OgBeubV.gif" width= "100%" />
+<img src="https://imgur.com/OgBeubV" width= "100%" />
 
 <hr/>
 
