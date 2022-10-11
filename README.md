@@ -5,7 +5,7 @@
 - **Academy:** CoderHouse.
 - **Course:** React JS.
 - **Author**: Gonzalo Ariel Rossi.
-- **Profesor**: Conrado Lanusse .
+- **Professor**: Conrado Lanusse .
 - **Tutor**: Ramiro D'Accorso.
 
 <hr/>
